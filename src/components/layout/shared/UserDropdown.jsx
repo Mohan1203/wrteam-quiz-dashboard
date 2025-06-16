@@ -1,7 +1,7 @@
 'use client'
 
 // React Imports
-import { useRef, useState } from 'react'
+import { useRef, useState, forwardRef, memo } from 'react'
 
 // Next Imports
 import { useParams, useRouter } from 'next/navigation'
@@ -40,7 +40,7 @@ const BadgeContentSpan = styled('span')({
   boxShadow: '0 0 0 2px var(--mui-palette-background-paper)'
 })
 
-const UserDropdown = () => {
+const UserDropdown = forwardRef((props, ref) => {
   const dispatch = useDispatch()
   // States
   const [open, setOpen] = useState(false)
@@ -174,6 +174,8 @@ const UserDropdown = () => {
       </Popper>
     </>
   )
-}
+})
+
+UserDropdown.displayName = 'UserDropdown'
 
 export default UserDropdown
