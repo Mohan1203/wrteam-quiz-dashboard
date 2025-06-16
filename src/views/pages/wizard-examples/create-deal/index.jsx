@@ -55,11 +55,11 @@ const Step = styled(MuiStep)({
   }
 })
 
-const getStepContent = (step, handleNext, handlePrev) => {
-  const Tag = step === 0 ? StepDealType : step === 1 ? StepDealDetails : step === 2 ? StepDealUsage : StepReview
+// const getStepContent = (step, handleNext, handlePrev) => {
+//   const Tag = step === 0 ? StepDealType : step === 1 ? StepDealDetails : step === 2 ? StepDealUsage : StepReview
 
-  return <Tag activeStep={step} handleNext={handleNext} handlePrev={handlePrev} steps={steps} />
-}
+//   return <Tag activeStep={step} handleNext={handleNext} handlePrev={handlePrev} steps={steps} />
+// }
 
 const CreateDeal = () => {
   // States
@@ -118,7 +118,7 @@ const CreateDeal = () => {
         </StepperWrapper>
       </CardContent>
 
-      <CardContent className='flex-1 pbs-6'>{getStepContent(activeStep, handleNext, handlePrev)}</CardContent>
+      {/* <CardContent className='flex-1 pbs-6'>{getStepContent(activeStep, handleNext, handlePrev)}</CardContent> */}
     </Card>
   )
 }
