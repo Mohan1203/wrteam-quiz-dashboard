@@ -34,7 +34,7 @@ const CustomInput = forwardRef((props, ref) => {
   return <CustomTextField fullWidth inputRef={ref} label={props.label || ''} {...props} value={value} />
 })
 
-const StepDealDetails = ({ activeStep, handleNext, handlePrev, steps }) => {
+function StepDealDetails({ activeStep, handleNext, handlePrev, steps }) {
   // States
   const [startDate, setStartDate] = useState(null)
   const [endDate, setEndDate] = useState(null)
